@@ -70,8 +70,8 @@ export default function Features() {
     >
       {/* <div className="text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#A6DDFF] via-[var(--rss-theme-primary)] to-[#0077FF]">
         {t('header.features')}
-      </div>
-      <div className="text-center mt-4">
+      </div> */}
+      <div className="text-center mt-14">
         <div className="text-center font-heading text-3xl font-bold leading-none sm:text-4xl">
           {t('features.description')}
         </div>
@@ -80,7 +80,7 @@ export default function Features() {
         {t('features.description-2')}
       </div>
 
-      <div className="mt-14">
+      {/* <div className="mt-14">
         <BentoGrid className="lg:grid-rows-3">
           {features.map(feature => (
             <BentoCard key={feature.name} {...feature} />
@@ -88,7 +88,7 @@ export default function Features() {
         </BentoGrid>
       </div> */}
 
-      <div className="flex w-full flex-row">
+      <div className="flex w-full flex-row mt-14">
         <div className="hidden flex-col md:flex">
           <div className="flex h-16 w-8 border-b-[1.5px] border-r-[1.5px] border-dashed"></div>
           <div className="flex flex-1"></div>

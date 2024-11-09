@@ -30,6 +30,11 @@
     "description-2": "Don't just take our word for it. Here's what our users have to say about their experience with our RssTabs."
   },
 
+  "hot-feeds": {
+    "description": "Hot feeds in RssTabs",
+    "description-2": "As of today, RssTabs has collected thousands of hot RSS feeds, and more are coming."
+  },
+
   "footer": {
     "resources": "Resources",
     "docs": "Docs",

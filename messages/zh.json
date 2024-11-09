@@ -12,7 +12,7 @@
 
   "header": {
     "features": "功能",
-    "hot-feeds": "热门订阅",
+    "hot-feeds": "热门源",
     "pricing": "定价",
     "docs": "文档",
     "blogs": "博客",
@@ -23,6 +23,11 @@
   "features": {
     "description": "智能、个性化且高效",
     "description-2": "使用 AI 技术，为您量身定制最新头条"
+  },
+
+  "hot-feeds": {
+    "description": "RssTabs 中的热门源",
+    "description-2": "截至今日，RssTabs 已收录了数千条热门的 RSS 源，未来还将收录更多。"
   },
 
   "evaluate": {

@@ -119,11 +119,16 @@ const AnimatedBlock = ({
         style={{ translateX: translateX }}
         className="w-full"
       >
-        <Iphone15Pro
-          clipPathId="roundedCorners_pc"
-          src="/images/mobile.png"
-          className="size-full"
-        />
+        <div className="perspective-4000 transform-style-3d perspective-origin-100-0">
+          <div className="scale3d-[1.2] transform-origin-top-left translate-x-[2%] rotate-y-[20deg] rotate-x-[10deg] rotate-[10deg]">
+            <div className="absolute right-0 top-0 h-full w-1/4 bg-gradient-to-r from-transparent to-background"></div>
+            <Iphone15Pro
+              clipPathId="roundedCorners_pc"
+              src="/images/mobile.png"
+              className="size-full"
+            />
+          </div>
+        </div>
       </motion.div>
 
       <motion.div
@@ -133,11 +138,16 @@ const AnimatedBlock = ({
         transition={{ delay: 1.4 }}
         className="w-100%"
       >
-        <Safari
-          url="https://app.rsstabs.com"
-          src="/images/pc.png"
-          className="size-full"
-        />
+        <div className="perspective-4000 transform-style-3d perspective-origin-100-0">
+          <div className="scale3d-[1.2] transform-origin-top-left translate-x-[2%] rotate-y-[28deg] rotate-x-[44deg] rotate-[325deg]">
+            <div className="absolute right-0 top-0 h-full w-1/4 bg-gradient-to-r from-transparent to-background"></div>
+            <Safari
+              url="https://app.rsstabs.com"
+              src="/images/pc.png"
+              className="size-full "
+            />
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   )

@@ -129,6 +129,6 @@ const config: Config = {
       }
     }
   },
-  plugins: [require('tailwindcss-animate')]
+  plugins: [require('tailwindcss-3d'), require('tailwindcss-animate')]
 }
 export default config

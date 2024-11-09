@@ -12,7 +12,7 @@
 
   "header": {
     "features": "機能",
-    "hot-feeds": "人気のサブスクリプション",
+    "hot-feeds": "ポピュラーソース",
     "pricing": "価格",
     "docs": "ドキュメント",
     "blogs": "ブログ",
@@ -28,6 +28,11 @@
   "evaluate": {
     "description": "ユーザーの声",
     "description-2": "私たちの言葉を鵜呑みにしないでください。RssTabsを体験したユーザーの声をご紹介します。"
+  },
+
+  "hot-feeds": {
+    "description": "RssTabs のポピュラーソース",
+    "description-2": "今日現在、RssTabs は数千のポピュラーな RSS ソースを収集しており、さらに多くのソースを収集しています。"
   },
 
   "footer": {
