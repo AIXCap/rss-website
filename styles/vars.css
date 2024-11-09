@@ -1,0 +1,71 @@
+:root,
+html.dark {
+  --rss-color-white: #ffffff;
+  --rss-color-white-val: 255, 255, 255;
+  --rss-color-black: #000000;
+  --rss-color-black-val: 0, 0, 0;
+  --rss-color-blue: #1a4dd4;
+  --rss-color-blue-val: 26, 77, 212;
+  --rss-color-red: #eb5757;
+  --rss-color-red-val: 235, 87, 87;
+  --rss-color-yellow: #f2994a;
+  --rss-color-yellow-val: 242, 153, 74;
+  --rss-color-green: #4cb782;
+  --rss-color-green-val: 76, 183, 130;
+  --rss-color-purple: #bb87fc;
+  --rss-color-purple-val: 187, 135, 252;
+
+  --rss-color-gray-1: var(--rss-color-white);
+  --rss-color-gray-2: #b0b5c0;
+  --rss-color-gray-2-val: 176, 181, 192;
+  --rss-color-gray-3: #858699;
+  --rss-color-gray-3-val: 133, 134, 153;
+  --rss-color-gray-4: #6b6f76;
+  --rss-color-gray-4-val: 107, 111, 118;
+  --rss-color-gray-5: #4c4f6b;
+  --rss-color-gray-5-val: 76, 79, 107;
+  --rss-color-gray-6: #393a4b;
+  --rss-color-gray-6-val: 57, 58, 75;
+  --rss-color-gray-7: #313248;
+  --rss-color-gray-7-val: 49, 50, 72;
+  --rss-color-gray-8: #2c2d3c;
+  --rss-color-gray-8-val: 44, 45, 60;
+  --rss-color-gray-9: #1d1e2b;
+  --rss-color-gray-9-val: 29, 30, 43;
+  --rss-color-gray-10: #151621;
+  --rss-color-gray-10-val: 21, 22, 33;
+  --rss-color-gray-11: #15151b;
+
+  --rss-color-text: var(--rss-color-gray-1);
+  --rss-color-text-1: var(--rss-color-gray-2);
+  --rss-color-text-2: var(--rss-color-gray-3);
+  --rss-color-text-3: var(--rss-color-gray-4);
+  --rss-color-text-inverse: var(--rss-color-gray-11);
+
+  --rss-color-border: var(--rss-color-gray-6);
+  --rss-color-border-1: var(--rss-color-gray-8);
+  --rss-color-bg: var(--rss-color-gray-11);
+  --rss-color-bg-1: var(--rss-color-gray-10);
+  --rss-color-bg-2: var(--rss-color-gray-9);
+  --rss-color-bg-3: var(--rss-color-gray-7);
+  --rss-color-bg-elevated: rgba(var(--rss-color-white-val), 0.05);
+  --rss-color-bg-diminish: rgba(var(--rss-color-black-val), 0.25);
+  --rss-color-bg-inverse: var(--rss-color-gray-1);
+
+  --rss-theme-primary: var(--rss-color-blue);
+  --rss-theme-primary-hover: rgba(var(--rss-color-blue-val), 0.4);
+
+  --rss-theme-shadow: 0px 4px 4px 0px rgba(var(--rss-color-black-val), 0.25);
+  --rss-theme-primary-shadow: 0px 4px 4px 0px
+    rgba(var(--rss-color-blue-val), 0.25);
+  --rss-theme-primary-inp-shadow: 0 0 0px 4px
+    rgba(var(--rss-color-blue-val), 0.35);
+
+  --rss-border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  html {
+  }
+}

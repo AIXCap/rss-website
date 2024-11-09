@@ -1,0 +1,39 @@
+{
+  "title": "RssTabs.com",
+  "description": "Build your own AI news assistant in RssTabs. Smart, personalized, and efficient.",
+  "description-2": "Use cutting-edge AI technology to customize the latest headlines just for you.",
+  "sign-in": "Sign in",
+  "start-now": "Start now",
+  "get-free": "Get free",
+  "add-to-chrome": "Add to {browser}",
+  "public-beta": "RssTabs is in public beta!",
+
+  "header": {
+    "features": "Features",
+    "hot-feeds": "Hot Feeds",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "blogs": "Blogs",
+    "support": "Support"
+  },
+
+  "features": {
+    "description": "Smart, personalized, and efficient",
+    "description-2": "Use cutting-edge AI technology to customize the latest headlines just for you."
+  },
+
+  "footer": {
+    "resources": "Resources",
+    "docs": "Docs",
+    "blog": "Blog",
+    "releases": "Releases",
+    "more": "More",
+    "about": "About us",
+    "contact": "Contact us",
+    "feedback": "Feedback",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "Copyright © {year} RssTabs.com. All rights reserved."
+  }
+}

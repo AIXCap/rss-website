@@ -1,0 +1,39 @@
+{
+  "title": "RssTabs.com",
+  "description": "RssTabs で自分の AI ニュースアシスタントを構築します。スマートで、個性があり、効率的です。",
+  "description-2": "最先端の AI 技術を使用して、最新のヘッドラインをあなたに合わせてカスタマイズします。",
+  "sign-in": "ログイン",
+  "start-now": "開始",
+  "get-free": "無料で取得",
+  "add-to-chrome": "{browser} に追加",
+  "public-beta": "RssTabs はパブリックベータ版です！",
+
+  "header": {
+    "features": "機能",
+    "hot-feeds": "人気のサブスクリプション",
+    "pricing": "価格",
+    "docs": "ドキュメント",
+    "blogs": "ブログ",
+    "support": "サポート"
+  },
+
+  "features": {
+    "description": "スマートで、個性があり、効率的",
+    "description-2": "最先端の AI 技術を使用して、最新のヘッドラインをあなたに合わせてカスタマイズします。"
+  },
+
+  "footer": {
+    "resources": "リソース",
+    "docs": "ドキュメント",
+    "blog": "ブログ",
+    "releases": "リリース",
+    "more": "もっと",
+    "about": "私たちについて",
+    "contact": "お問い合わせ",
+    "feedback": "フィードバック",
+    "legal": "法律",
+    "privacy": "プライバシーポリシー",
+    "terms": "サービス利用規約",
+    "copyright": "© {year} RssTabs.com すべての権利を保持します"
+  }
+}

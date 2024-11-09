@@ -1,0 +1,7 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "eslint:recommended"],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {}
+}
