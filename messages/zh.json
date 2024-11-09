@@ -5,6 +5,8 @@
   "sign-in": "登录",
   "start-now": "开始使用",
   "get-free": "免费获取",
+  "get-free-description": "免费开始",
+  "get-free-description-2": "无需信用卡，立即开始使用 RssTabs 的免费版本",
   "add-to-chrome": "添加到 {browser}",
   "public-beta": "RssTabs 开始公测了！",
 
@@ -14,12 +16,18 @@
     "pricing": "定价",
     "docs": "文档",
     "blogs": "博客",
-    "support": "支持"
+    "support": "支持",
+    "evaluate": "用户评价"
   },
 
   "features": {
     "description": "智能、个性化且高效",
     "description-2": "使用 AI 技术，为您量身定制最新头条"
+  },
+
+  "evaluate": {
+    "description": "我们的用户在说什么",
+    "description-2": "不要只相信我们的一面之词。以下是我们的用户对 RssTabs 体验的评价。"
   },
 
   "footer": {

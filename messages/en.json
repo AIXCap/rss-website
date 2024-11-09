@@ -5,6 +5,8 @@
   "sign-in": "Sign in",
   "start-now": "Start now",
   "get-free": "Get free",
+  "get-free-description": "Get started for free",
+  "get-free-description-2": "Start using the free version of RssTabs without a credit card",
   "add-to-chrome": "Add to {browser}",
   "public-beta": "RssTabs is in public beta!",
 
@@ -14,12 +16,18 @@
     "pricing": "Pricing",
     "docs": "Docs",
     "blogs": "Blogs",
-    "support": "Support"
+    "support": "Support",
+    "evaluate": "User Evaluation"
   },
 
   "features": {
     "description": "Smart, personalized, and efficient",
     "description-2": "Use cutting-edge AI technology to customize the latest headlines just for you."
+  },
+
+  "evaluate": {
+    "description": "What our users are saying",
+    "description-2": "Don't just take our word for it. Here's what our users have to say about their experience with our RssTabs."
   },
 
   "footer": {

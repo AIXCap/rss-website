@@ -2,7 +2,7 @@ import Hero from './components/hero'
 import Features from './components/features'
 import Pricing from './components/pricing'
 import Evaluate from './components/evaluate'
-import TextReveal from '@/components/ui/text-reveal'
+import GetFree from './components/get-free'
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
       <Features />
       <Pricing />
       <Evaluate />
+      <GetFree />
     </div>
   )
 }

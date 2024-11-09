@@ -5,6 +5,8 @@
   "sign-in": "ログイン",
   "start-now": "開始",
   "get-free": "無料で取得",
+  "get-free-description": "無料で開始",
+  "get-free-description-2": "クレジットカードなしで RssTabs の無料版を使用して開始",
   "add-to-chrome": "{browser} に追加",
   "public-beta": "RssTabs はパブリックベータ版です！",
 
@@ -14,12 +16,18 @@
     "pricing": "価格",
     "docs": "ドキュメント",
     "blogs": "ブログ",
-    "support": "サポート"
+    "support": "サポート",
+    "evaluate": "ユーザーの声"
   },
 
   "features": {
     "description": "スマートで、個性があり、効率的",
     "description-2": "最先端の AI 技術を使用して、最新のヘッドラインをあなたに合わせてカスタマイズします。"
+  },
+
+  "evaluate": {
+    "description": "ユーザーの声",
+    "description-2": "私たちの言葉を鵜呑みにしないでください。RssTabsを体験したユーザーの声をご紹介します。"
   },
 
   "footer": {

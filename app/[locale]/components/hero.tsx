@@ -6,11 +6,9 @@ import AnimatedGradientText from '@/components/ui/animated-gradient-text'
 import WordFadeIn from '@/components/ui/word-fade-in'
 import Safari from '@/components/ui/safari'
 import Iphone15Pro from '@/components/ui/iphone-15-pro'
-import { Button } from '@/components/ui/button'
-import ShimmerButton from '@/components/ui/shimmer-button'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
-import { useRef, useEffect, useState } from 'react'
-import Image from 'next/image'
+import { useRef } from 'react'
+import StartButtonGroup from './start-button-group'
 
 export default function Hero() {
   const t = useTranslations()
@@ -19,32 +17,6 @@ export default function Hero() {
   const { scrollYProgress } = useScroll({
     target: targetRef
   })
-
-  const [browser, setBrowser] = useState<{
-    isChrome: boolean
-    isFirefox: boolean
-    isEdge: boolean
-  }>({
-    isChrome: false,
-    isFirefox: false,
-    isEdge: false
-  })
-  useEffect(() => {
-    const detectBrowser = () => {
-      if (typeof window === 'undefined') return
-
-      const ua = window.navigator.userAgent.toLowerCase()
-
-      return {
-        isChrome: /chrome/.test(ua) && !/edg|edge/.test(ua) && !/opr/.test(ua),
-        isFirefox: /firefox/.test(ua),
-        isEdge: /edg|edge/.test(ua),
-        isSafari: /safari/.test(ua) && !/chrome/.test(ua)
-      }
-    }
-
-    setBrowser(detectBrowser() || browser)
-  }, [])
 
   return (
     <div ref={targetRef} className="relative w-full h-[calc(300vh)]">
@@ -98,43 +70,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ delay: 1.2 }}
           >
-            <div className="flex justify-center items-center gap-4 mt-8">
-              {/* <Button className="rounded-full" size="lg">
-                Start Now
-              </Button> */}
-              <ShimmerButton
-                className="shadow-xl"
-                background="var(--rss-color-bg)"
-              >
-                <span className="text-center text-sm text-[var(--rss-color-text)]">
-                  {t('get-free')}
-                </span>
-              </ShimmerButton>
-              {(browser.isChrome || browser.isFirefox || browser.isEdge) && (
-                <Button className="rounded-full" size="lg">
-                  <Image
-                    className="mr-1"
-                    width={18}
-                    height={18}
-                    src={
-                      browser.isChrome
-                        ? '/images/chrome.png'
-                        : browser.isFirefox
-                          ? '/images/firefox.png'
-                          : '/images/edge.png'
-                    }
-                    alt=""
-                  />
-                  {t('add-to-chrome', {
-                    browser: browser.isChrome
-                      ? 'Google Chrome'
-                      : browser.isFirefox
-                        ? 'Mozilla Firefox'
-                        : 'Microsoft Edge'
-                  })}
-                </Button>
-              )}
-            </div>
+            <StartButtonGroup />
           </motion.div>
         </motion.div>
         <AnimatedBlock

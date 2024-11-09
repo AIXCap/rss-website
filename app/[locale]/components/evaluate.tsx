@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 import Marquee from '@/components/ui/marquee'
-
+import { useTranslations } from 'next-intl'
 const reviews = [
   {
     name: 'Isboyjc',
@@ -64,8 +64,10 @@ const reviews = [
   }
 ]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
+const chunkSize = Math.ceil(reviews.length / 3)
+const firstRow = reviews.slice(0, chunkSize)
+const secondRow = reviews.slice(chunkSize, chunkSize * 2)
+const thirdRow = reviews.slice(chunkSize * 2)
 
 const ReviewCard = ({
   img,
@@ -81,7 +83,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        'relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4',
+        'relative h-40 w-[100%] cursor-pointer overflow-hidden rounded-xl border p-4',
         // light styles
         // 'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
         // dark styles
@@ -103,20 +105,53 @@ const ReviewCard = ({
 }
 
 export default function Evaluate() {
+  const t = useTranslations()
+
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map(review => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map(review => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+    <div className="relative max-w-screen-xl mx-auto py-40 px-5">
+      {/* <div className="text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#A6DDFF] via-[var(--rss-theme-primary)] to-[#0077FF]">
+        {t('header.evaluate')}
+      </div> */}
+      <div className="text-center mt-4">
+        <div className="text-center font-heading text-3xl font-bold leading-none sm:text-4xl">
+          {t('evaluate.description')}
+        </div>
+      </div>
+      <div className="text-center text-[var(--rss-color-text-2)] text-xl mb-40 mt-4">
+        {t('evaluate.description-2')}
+      </div>
+      <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden rounded-lg bg-background">
+        <Marquee
+          pauseOnHover
+          vertical
+          className="w-full sm:w-1/2 md:w-1/3 [--duration:20s]"
+        >
+          {firstRow.map(review => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee
+          reverse
+          pauseOnHover
+          vertical
+          className="hidden w-full sm:flex sm:w-1/2 md:flex md:w-1/3 [--duration:20s]"
+        >
+          {secondRow.map(review => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee
+          pauseOnHover
+          vertical
+          className="hidden md:flex w-full md:w-1/3 [--duration:20s]"
+        >
+          {thirdRow.map(review => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
+      </div>
     </div>
   )
 }
