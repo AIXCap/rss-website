@@ -25,7 +25,7 @@ export default function HotFeeds() {
   return (
     <div
       ref={targetRef}
-      className="relative w-full h-[200vh] flex justify-center items-end"
+      className="relative w-full h-[200vh] flex justify-center items-end -mt-[20vh]"
     >
       <motion.div className="absolute max-w-[4000px] w-full h-[120vh] flex flex-col items-center justify-start mb-[20vh] mx-auto overflow-hidden">
         <div className="h-20 absolute z-10 bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-[var(--rss-color-bg)]"></div>

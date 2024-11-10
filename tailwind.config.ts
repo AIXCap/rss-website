@@ -62,6 +62,8 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       animation: {
+        ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
+        orbit: 'orbit calc(var(--duration)*1s) linear infinite',
         grid: 'grid 15s linear infinite',
         rainbow: 'rainbow var(--speed, 2s) infinite linear',
         'shimmer-slide':
@@ -73,6 +75,24 @@ const config: Config = {
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
       },
       keyframes: {
+        ripple: {
+          '0%, 100%': {
+            transform: 'translate(-50%, -50%) scale(1)'
+          },
+          '50%': {
+            transform: 'translate(-50%, -50%) scale(0.9)'
+          }
+        },
+        orbit: {
+          '0%': {
+            transform:
+              'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)'
+          },
+          '100%': {
+            transform:
+              'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
+          }
+        },
         marquee: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-100% - var(--gap)))' }

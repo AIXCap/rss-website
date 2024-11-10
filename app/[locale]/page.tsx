@@ -13,7 +13,7 @@ export default function Home() {
       </div> */}
       <Features />
       <HotFeeds />
-      <Pricing />
+      {/* <Pricing /> */}
       <Evaluate />
       <GetFree />
     </div>

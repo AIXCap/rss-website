@@ -22,7 +22,19 @@
 
   "features": {
     "description": "スマートで、個性があり、効率的",
-    "description-2": "最先端の AI 技術を使用して、最新のヘッドラインをあなたに合わせてカスタマイズします。"
+    "description-2": "最先端の AI 技術を使用して、最新のヘッドラインをあなたに合わせてカスタマイズします。",
+    "learn-more": "もっと詳しく",
+    "aggregation": "情報集約",
+    "aggregation-i": "情報",
+    "aggregation-description": "RssTabs は数千の人気 RSS ソースを収集し、一貫した読み取り体験を提供します。",
+    "language": "ローカライゼーション言語",
+    "language-description": "RssTabsは複数の国の言語をサポートし、読書体験をシームレスに切り替えます。",
+    "bookmark": "ブックマーク",
+    "bookmark-description": "一瞬で興味深いコンテンツを保存し、いつでも簡単に確認できます。",
+    "search": "検索エンジン",
+    "search-description": "RssTabs は組み込みの検索エンジンを備えており、自由に構成して高速で正確な検索体験を提供します。",
+    "layout": "カスタマイズ可能なレイアウト",
+    "layout-description": "RssTabs ではページレイアウトを柔軟に調整し、お気に入りの設定に応じてカスタマイズして、独自の読み取りインターフェイスを作成できます。"
   },
 
   "evaluate": {

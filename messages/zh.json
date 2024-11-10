@@ -22,7 +22,21 @@
 
   "features": {
     "description": "智能、个性化且高效",
-    "description-2": "使用 AI 技术，为您量身定制最新头条"
+    "description-2": "使用 AI 技术，为您量身定制最新头条",
+    "learn-more": "了解更多",
+    "aggregation": "信息聚合",
+    "aggregation-i": "信息",
+    "aggregation-description": "RssTabs 收录了数千个热门 RSS 源，为您提供一站式阅读体验。",
+    "language": "本地化语言",
+    "language-description": "RssTabs 支持多种国家语言，无缝切换阅读体验。",
+    "bookmark": "书签",
+    "bookmark-description": "一键保存精彩内容，方便随时回看。",
+    "search": "搜索引擎",
+    "search-description": "RssTabs 内置了搜索引擎，您也可以自由配置，为您提供快速、准确的搜索体验。",
+    "layout": "自定义布局",
+    "layout-description": "RssTabs 您灵活调整页面布局，根据自己的喜好进行自由配置，打造专属阅读界面。",
+    "polyfeed": "聚合源",
+    "polyfeed-description": "RssTabs 支持多源聚合，我们叫它聚合源，您可以自由添加和管理多个 RSS 源，借助 AI 个性化定制打造属于自己的信息流。"
   },
 
   "hot-feeds": {

@@ -22,7 +22,21 @@
 
   "features": {
     "description": "Smart, personalized, and efficient",
-    "description-2": "Use cutting-edge AI technology to customize the latest headlines just for you."
+    "description-2": "Use cutting-edge AI technology to customize the latest headlines just for you.",
+    "learn-more": "Learn more",
+    "aggregation": "Information Aggregation",
+    "aggregation-i": "Information",
+    "aggregation-description": "RssTabs collects thousands of popular RSS sources, providing a one-stop reading experience.",
+    "language": "Localization Language",
+    "language-description": "RssTabs supports multiple national languages, seamlessly switching the reading experience.",
+    "bookmark": "Bookmark",
+    "bookmark-description": "One-click save interesting content for easy review at any time.",
+    "search": "Search Engine",
+    "search-description": "RssTabs is equipped with a built-in search engine, and you can also freely configure it to provide a fast and accurate search experience.",
+    "layout": "Custom Layout",
+    "layout-description": "RssTabs allows you to flexibly adjust the page layout and configure it according to your preferences to create a personalized reading interface.",
+    "polyfeed": "Poly Feed",
+    "polyfeed-description": "RssTabs supports multi-source aggregation, which we call polyfeed. You can freely add and manage multiple RSS sources to create your own information stream with AI personalized customization."
   },
 
   "evaluate": {
