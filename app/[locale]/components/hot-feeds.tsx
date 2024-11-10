@@ -48,7 +48,7 @@ export default function HotFeeds() {
               <div
                 key={name + i}
                 className={cn(
-                  'flex flex-col items-center justify-around -rotate-[45deg] opacity-[0.03] hover:opacity-[0.5] hover:scale-110 transition-all duration-300 cursor-pointer'
+                  'flex flex-col items-center justify-around -rotate-[45deg] opacity-[0.15] hover:opacity-[0.5] hover:scale-110 transition-all duration-300 cursor-pointer'
                 )}
               >
                 <Icon className="w-full h-full" />
