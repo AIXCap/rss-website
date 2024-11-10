@@ -19,8 +19,8 @@ export default function Hero() {
   })
 
   return (
-    <div ref={targetRef} className="relative w-full h-[calc(300vh)]">
-      <div className="sticky top-[64px] h-[calc(110vh-64px)] md:h-[calc(100vh-64px)] mx-auto overflow-hidden">
+    <div className="relative w-full h-[100vh] overflow-hidden">
+      <div ref={targetRef} className="h-[200vh] mx-auto">
         <motion.div
           style={{
             translateY: useTransform(scrollYProgress, [0, 1], [0, -150])
