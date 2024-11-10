@@ -44,10 +44,10 @@ export default function Header() {
             <Link href="/#hot-feeds" className="opacity-70 hover:opacity-100">
               {t('header.pricing')}
             </Link>
-            <Link href="/docs" className="opacity-70 hover:opacity-100">
+            <Link href="/" className="opacity-70 hover:opacity-100">
               {t('header.docs')}
             </Link>
-            <Link href="/support" className="opacity-70 hover:opacity-100">
+            <Link href="/" className="opacity-70 hover:opacity-100">
               {t('header.support')}
             </Link>
           </div>

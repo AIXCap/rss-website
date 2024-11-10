@@ -18,56 +18,6 @@ import { SearchBg } from './search-bg'
 import { BookmarkBg } from './bookmark-bg'
 import { LayoutBg } from './layout-bg'
 
-const features = [
-  {
-    Icon: FileTextIcon,
-    name: '信息聚合',
-    description: '汇集多个RSS源,一站式阅读各类资讯。',
-    href: '/',
-    cta: 'Learn more',
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: 'lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-3'
-  },
-  {
-    Icon: InputIcon,
-    name: '多语言',
-    description: '支持多种语言,无缝切换阅读体验。',
-    href: '/',
-    cta: 'Learn more',
-    background: (
-      <Globe className="absolute -right-[120px] -top-[110px] opacity-60 scale-[1]" />
-    ),
-    className: 'lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-4'
-  },
-  {
-    Icon: GlobeIcon,
-    name: '书签收藏',
-    description: '一键保存精彩内容,方便随时回看。',
-    href: '/',
-    cta: 'Learn more',
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: 'lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-5'
-  },
-  {
-    Icon: CalendarIcon,
-    name: '自定义布局',
-    description: '灵活调整页面布局,打造专属阅读界面。',
-    href: '/',
-    cta: 'Learn more',
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: 'lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-4'
-  },
-  {
-    Icon: BellIcon,
-    name: '搜索引擎',
-    description: '添加常用搜索引擎,快速查找信息。',
-    href: '/',
-    cta: 'Learn more',
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: 'lg:col-start-2 lg:col-end-6 lg:row-start-4 lg:row-end-5'
-  }
-]
-
 interface GlobeRef {
   globe: any
   toggle: (show: boolean) => void

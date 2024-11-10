@@ -1,8 +1,20 @@
-import createNextIntlPlugin from 'next-intl/plugin';
+import createNextIntlPlugin from 'next-intl/plugin'
+import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev'
 
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin()
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  output: 'standalone',
+  experimental: {
+    serverActions: {
+      allowedOrigins: ['localhost:3000', '*.pages.dev']
+    }
+  }
+}
 
-export default withNextIntl(nextConfig);
+if (process.env.NODE_ENV === 'development') {
+  await setupDevPlatform()
+}
+
+export default withNextIntl(nextConfig)

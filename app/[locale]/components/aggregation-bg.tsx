@@ -2,7 +2,6 @@ import OrbitingCircles from '@/components/ui/orbiting-circles'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import {
-  LogosCSharp,
   LogosDotnet,
   LogosAndroidIcon,
   LogosJavascript,
@@ -11,7 +10,6 @@ import {
   LogosRedditIcon,
   LogosGoogleDevelopers,
   LogosStackoverflowIcon,
-  LogosSifou,
   LogosJuejin,
   LogosGithub,
   LogosMediumIcon
