@@ -1,3 +1,6 @@
+// cloudflare edge runtime
+export const runtime = 'edge'
+
 import Hero from './components/hero'
 import Features from './components/features'
 import Pricing from './components/pricing'
