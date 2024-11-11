@@ -35,14 +35,8 @@ const reviews = [
   {
     name: '老骥farmer',
     username: '@yongsen',
-    body: "I'm at a loss for words. This is amazing. I love it. good product! ha ~~~",
+    body: '他的出现简直是我的救星，这巧夺天工的设计，这丝滑流畅的体验，tql。',
     img: 'https://avatar.vercel.sh/yongsen'
-  },
-  {
-    name: '南方',
-    username: '@lwy625035300',
-    body: '很好用的产品，它解决了我在不同社区间切换阅读的痛点，非常感谢！',
-    img: 'https://avatar.vercel.sh/lwy625035300'
   },
   {
     name: 'Miyue',
@@ -61,6 +55,12 @@ const reviews = [
     username: '@orange121',
     body: '素晴らしい製品で、今後もサポートが継続されることを願っている！ 😄',
     img: 'https://avatar.vercel.sh/orange121'
+  },
+  {
+    name: '南方',
+    username: '@lwy625035300',
+    body: '很好用的产品，它解决了我在不同社区间切换阅读的痛点，非常感谢！',
+    img: 'https://avatar.vercel.sh/lwy625035300'
   }
 ]
 
