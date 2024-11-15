@@ -5,6 +5,7 @@ import { Link, routing, usePathname, useRouter } from '@/i18n/routing'
 import { Pacifico } from 'next/font/google'
 import { Button } from '@/components/ui/button'
 import { Languages, AlignRight } from 'lucide-react'
+import { cn } from '@/lib/utils'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -65,20 +66,7 @@ export default function Header() {
         </a>
 
         <div className="flex items-center h-full text-[14px]">
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/#features" className="opacity-70 hover:opacity-100">
-              {t('header.features')}
-            </Link>
-            <Link href="/#hot-feeds" className="opacity-70 hover:opacity-100">
-              {t('header.pricing')}
-            </Link>
-            <Link href="/" className="opacity-70 hover:opacity-100">
-              {t('header.docs')}
-            </Link>
-            <Link href="/" className="opacity-70 hover:opacity-100">
-              {t('header.support')}
-            </Link>
-          </div>
+          <NavList className="hidden md:flex items-center gap-8" />
           <div className="hidden md:block w-[1px] h-5 bg-[var(--rss-color-border)] rounded-full ml-8 mr-5"></div>
           {/* <ShimmerButton className="shadow-xl" background="var(--rss-color-bg)">
             <span className="text-center text-sm text-[var(--rss-color-text)]">
@@ -118,31 +106,33 @@ export default function Header() {
                 <DrawerHeader>
                   <DrawerTitle className="text-center">RssTabs</DrawerTitle>
                 </DrawerHeader>
-                <div className="w-full pt-4 pb-6 flex flex-col gap-4 items-center justify-start">
-                  <Link
-                    href="/#features"
-                    className="opacity-70 hover:opacity-100"
-                  >
-                    {t('header.features')}
-                  </Link>
-                  <Link
-                    href="/#hot-feeds"
-                    className="opacity-70 hover:opacity-100"
-                  >
-                    {t('header.pricing')}
-                  </Link>
-                  <Link href="/" className="opacity-70 hover:opacity-100">
-                    {t('header.docs')}
-                  </Link>
-                  <Link href="/" className="opacity-70 hover:opacity-100">
-                    {t('header.support')}
-                  </Link>
-                </div>
+                <NavList className="w-full pt-4 pb-6 flex flex-col gap-4 items-center justify-start" />
               </div>
             </DrawerContent>
           </Drawer>
         </div>
       </div>
     </header>
+  )
+}
+
+function NavList({ className }: { className: string }) {
+  const t = useTranslations()
+
+  return (
+    <div className={cn(className)}>
+      <Link href="/#features" className="opacity-70 hover:opacity-100">
+        {t('header.features')}
+      </Link>
+      <Link href="/" className="opacity-70 hover:opacity-100">
+        {t('header.pricing')}
+      </Link>
+      <Link href="/" className="opacity-70 hover:opacity-100">
+        {t('header.docs')}
+      </Link>
+      <Link href="/" className="opacity-70 hover:opacity-100">
+        {t('header.support')}
+      </Link>
+    </div>
   )
 }

@@ -1,5 +1,5 @@
 /*
- * @LastEditTime: 2024-11-09 17:26:51
+ * @LastEditTime: 2024-11-15 15:56:32
  * @Description: ...
  * @Date: 2024-11-09 17:25:44
  * @Author: isboyjc
@@ -44,7 +44,13 @@ export default function StartButtonGroup() {
 
   return (
     <div className="flex justify-center items-center gap-4 mt-8">
-      <ShimmerButton className="shadow-xl" background="var(--rss-color-bg)">
+      <ShimmerButton
+        className="shadow-xl"
+        background="var(--rss-color-bg)"
+        onClick={() => {
+          window.open('https://app.rsstabs.com', '_blank')
+        }}
+      >
         <span className="text-center text-sm text-[var(--rss-color-text)]">
           {t('get-free')}
         </span>
