@@ -1,9 +1,24 @@
+'use client'
 import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
+import { Link, routing, usePathname, useRouter } from '@/i18n/routing'
 import { Pacifico } from 'next/font/google'
-import ShimmerButton from '@/components/ui/shimmer-button'
 import { Button } from '@/components/ui/button'
-import { Languages } from 'lucide-react'
-import { Link } from '@/i18n/routing'
+import { Languages, AlignRight } from 'lucide-react'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+  DrawerDescription
+} from '@/components/ui/drawer'
 
 const pacifico = Pacifico({
   subsets: ['latin'],
@@ -13,6 +28,19 @@ const pacifico = Pacifico({
 
 export default function Header() {
   const t = useTranslations()
+  const router = useRouter()
+  const pathname = usePathname()
+  const params = useParams()
+
+  const handleLanguageChange = (locale: string) => {
+    router.replace(
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      { pathname, params },
+      { locale }
+    )
+  }
 
   return (
     <header className="sticky top-0 z-50 box-border transition-colors backdrop-blur-md h-16 box-border">
@@ -57,9 +85,62 @@ export default function Header() {
               {t('get-free')}
             </span>
           </ShimmerButton> */}
-          <Button className="rounded-full" variant="ghost" size="icon">
-            <Languages />
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="rounded-[10px]" variant="ghost" size="icon">
+                <Languages />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-30">
+              {routing.locales.map(cur => (
+                <DropdownMenuItem
+                  key={cur}
+                  onClick={() => handleLanguageChange(cur)}
+                >
+                  <span>{t(`locale.${cur}`)}</span>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Drawer>
+            <DrawerTrigger asChild>
+              <Button
+                className="rounded-[10px] ml-2 md:hidden"
+                variant="ghost"
+                size="icon"
+              >
+                <AlignRight />
+              </Button>
+            </DrawerTrigger>
+            <DrawerContent>
+              <div className="mx-auto w-full max-w-sm">
+                <DrawerHeader>
+                  <DrawerTitle className="text-center">RssTabs</DrawerTitle>
+                </DrawerHeader>
+                <div className="w-full pt-4 pb-6 flex flex-col gap-4 items-center justify-start">
+                  <Link
+                    href="/#features"
+                    className="opacity-70 hover:opacity-100"
+                  >
+                    {t('header.features')}
+                  </Link>
+                  <Link
+                    href="/#hot-feeds"
+                    className="opacity-70 hover:opacity-100"
+                  >
+                    {t('header.pricing')}
+                  </Link>
+                  <Link href="/" className="opacity-70 hover:opacity-100">
+                    {t('header.docs')}
+                  </Link>
+                  <Link href="/" className="opacity-70 hover:opacity-100">
+                    {t('header.support')}
+                  </Link>
+                </div>
+              </div>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
     </header>

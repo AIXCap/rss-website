@@ -1,4 +1,13 @@
 {
+  "locale": {
+    "zh": "🇨🇳 Chinese",
+    "zh-CN": "🇨🇳 Chinese (Simplified)",
+    "en": "🇬🇧 English",
+    "en-US": "🇺🇸 English (USA)",
+    "ja": "🇯🇵 Japanese",
+    "ru": "🇷🇺 Russian"
+  },
+
   "title": "RssTabs.com",
   "description": "Build your own AI news assistant in RssTabs. Smart, personalized, and efficient.",
   "description-2": "Use cutting-edge AI technology to customize the latest headlines just for you.",

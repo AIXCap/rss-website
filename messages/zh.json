@@ -1,4 +1,13 @@
 {
+  "locale": {
+    "zh": "🇨🇳 中文",
+    "zh-CN": "🇨🇳 中文（中国大陆）",
+    "en": "🇬🇧 英语",
+    "en-US": "🇺🇸 英语（美国）",
+    "ja": "🇯🇵 日语",
+    "ru": "🇷🇺 俄语"
+  },
+
   "title": "RssTabs.com",
   "description": "在 RssTabs 中构建您自己的 AI 新闻助手。智能、个性化且高效。",
   "description-2": "采用尖端 AI 技术，为您量身定制最新头条。",
