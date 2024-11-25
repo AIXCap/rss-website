@@ -124,13 +124,25 @@ function NavList({ className }: { className: string }) {
       <Link href="/#features" className="opacity-70 hover:opacity-100">
         {t('header.features')}
       </Link>
-      <Link href="/" className="opacity-70 hover:opacity-100">
+      <Link
+        href="https://doc.rsstabs.com/pricing/plan.html"
+        target="_blank"
+        className="opacity-70 hover:opacity-100"
+      >
         {t('header.pricing')}
       </Link>
-      <Link href="/" className="opacity-70 hover:opacity-100">
+      <Link
+        href="https://doc.rsstabs.com/guide/introduction/what-is-it.html"
+        target="_blank"
+        className="opacity-70 hover:opacity-100"
+      >
         {t('header.docs')}
       </Link>
-      <Link href="/" className="opacity-70 hover:opacity-100">
+      <Link
+        href="https://doc.rsstabs.com/about/contact-us.html"
+        target="_blank"
+        className="opacity-70 hover:opacity-100"
+      >
         {t('header.support')}
       </Link>
     </div>

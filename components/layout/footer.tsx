@@ -44,23 +44,25 @@ export default function Footer() {
                 <li>
                   <a
                     className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
-                    href="/docs"
+                    href="https://doc.rsstabs.com/guide/introduction/what-is-it.html"
+                    target="_blank"
                   >
                     {t('footer.docs')}
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
                     href="/Blog"
                   >
                     {t('footer.blog')}
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a
                     className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
-                    href="/releases"
+                    href="https://doc.rsstabs.com/about/changelog.html"
+                    target="_blank"
                   >
                     {t('footer.releases')}
                   </a>
@@ -75,7 +77,8 @@ export default function Footer() {
                 <li>
                   <a
                     className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
-                    href="/docs/code-policy"
+                    href="https://doc.rsstabs.com/about/about-us.html"
+                    target="_blank"
                   >
                     {t('footer.about')}
                   </a>
@@ -83,7 +86,8 @@ export default function Footer() {
                 <li>
                   <a
                     className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
-                    href="/docs"
+                    href="https://doc.rsstabs.com/about/contact-us.html"
+                    target="_blank"
                   >
                     {t('footer.contact')}
                   </a>
@@ -91,7 +95,8 @@ export default function Footer() {
                 <li>
                   <a
                     className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
-                    href="/docs"
+                    href="https://doc.rsstabs.com/about/contact-us.html"
+                    target="_blank"
                   >
                     {t('footer.feedback')}
                   </a>
@@ -106,7 +111,8 @@ export default function Footer() {
                 <li>
                   <a
                     className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
-                    href="/docs/terms"
+                    href="https://doc.rsstabs.com/policy/user-agreement.html"
+                    target="_blank"
                   >
                     {t('footer.terms')}
                   </a>
@@ -114,7 +120,8 @@ export default function Footer() {
                 <li>
                   <a
                     className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
-                    href="/docs/privacy-policy"
+                    href="https://doc.rsstabs.com/policy/privacy-policy.html"
+                    target="_blank"
                   >
                     {t('footer.privacy')}
                   </a>
@@ -146,7 +153,7 @@ export default function Footer() {
             </a>
             <a
               className="text-[var(--rss-color-text-3)] hover:text-[var(--rss-color-text)]"
-              href="https://github.com/AIXCap/homepage"
+              href="https://github.com/AIXCap/rss-website"
             >
               <svg
                 width="15"
