@@ -1,3 +1,6 @@
+// cloudflare edge runtime
+export const runtime = 'edge'
+
 export default function Post() {
   return (
     <main>
