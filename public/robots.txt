@@ -1,0 +1,50 @@
+# *
+User-agent: *
+Disallow: /
+
+# Yisouspider
+User-agent: Yisouspider
+Allow: /
+
+# Applebot
+User-agent: Applebot
+Allow: /
+
+# bingbot
+User-agent: bingbot
+Allow: /
+
+# Sogou inst spider
+User-agent: Sogou inst spider
+Allow: /
+
+# Sogou web spider
+User-agent: Sogou web spider
+Allow: /
+
+# 360Spider
+User-agent: 360Spider
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Baiduspider
+User-agent: Baiduspider
+Allow: /
+
+# Bytespider
+User-agent: Bytespider
+Allow: /
+
+# PetalBot
+User-agent: PetalBot
+Allow: /
+
+# Host
+Host: https://www.rsstabs.com
+
+# Sitemaps
+Sitemap: https://www.rsstabs.com/sitemap.xml
+Sitemap: https://doc.rsstabs.com/sitemap.xml
