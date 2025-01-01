@@ -50,7 +50,8 @@ module.exports = {
     const locales = ['', 'zh', 'ja', 'ru']
     const routes = [
       '', // 首页
-      '/post'
+      '/post',
+      '/tags'
       // 添加其他重要页面路径
     ]
 
