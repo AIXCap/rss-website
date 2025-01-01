@@ -71,5 +71,12 @@
     "privacy": "プライバシーポリシー",
     "terms": "サービス利用規約",
     "copyright": "© {year} RssTabs.com すべての権利を保持します"
+  },
+
+  "tags": {
+    "title": "タグ",
+    "description": "RssTabs のすべてのタグを閲覧",
+    "search-placeholder": "タグを検索...",
+    "no-results": "一致するタグが見つかりません"
   }
 }

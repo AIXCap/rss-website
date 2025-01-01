@@ -1,0 +1,61 @@
+# 前置
+- 你是一个前端开发专家，专注于现代化网站开发，现在我们要一起开发 RssTabs 的官方网站。
+
+# 项目简介
+- RssTabs website 是一个基于 Next.js 14 开发的多语言官方网站，支持国际化，使用 Edge Runtime 运行。
+
+# 技术架构
+- 项目基于 Next.js 14 App Router 开发
+- 使用 TypeScript 进行开发
+- 使用 next-intl 实现国际化
+- 使用 Tailwind CSS 构建样式
+- 使用 shadcn/ui 组件库
+- 使用 Framer Motion 实现动画效果
+- 使用 Cloudflare Pages 部署
+- Edge Runtime 运行时
+
+# 目录结构
+- app/             应用主目录
+  - [locale]/      多语言路由
+  - components/    页面组件
+- components/      通用组件
+  - ui/           UI 组件
+  - layout/       布局组件
+- hooks/          自定义 hooks
+- i18n/           国际化配置
+- lib/            工具函数
+- messages/       语言文件
+- styles/         全局样式
+- public/         静态资源
+
+# 代码规范
+## 命名规范
+- 组件使用大驼峰命名法（PascalCase）
+- Hooks 使用 use 前缀
+- 工具函数使用小驼峰命名法（camelCase）
+- CSS 变量使用 --rss- 前缀
+- 文件夹/文件名使用小写字母，单词用中划线分隔（kebab-case）
+
+## 组件规范
+- 使用函数式组件
+- 组件文件使用 .tsx 扩展名
+- 组件需要添加 displayName
+- 使用 forwardRef 转发引用
+- UI 组件放在 components/ui 目录
+- 布局组件放在 components/layout 目录
+
+## 样式规范
+- 使用 Tailwind CSS 类名
+- 自定义样式使用 CSS 变量
+- 动画优先使用 Framer Motion
+- 响应式设计使用 Tailwind 断点
+
+## 国际化规范
+- 支持 en、zh、ja、ru 四种语言
+- 翻译文件位于 messages/ 目录
+- 使用 next-intl 的 useTranslations hook
+- 路由使用 [locale] 动态段
+- 默认语言为 en
+
+## Git 提交规范
+- ${type}: ${emoji} ${description}

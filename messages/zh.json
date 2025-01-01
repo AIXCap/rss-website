@@ -71,5 +71,12 @@
     "privacy": "隐私政策",
     "terms": "服务条款",
     "copyright": "版权所有 © {year} RssTabs.com 保留所有权利"
+  },
+
+  "tags": {
+    "title": "标签",
+    "description": "浏览 RssTabs 中的所有标签分类",
+    "search-placeholder": "搜索标签...",
+    "no-results": "没有找到匹配的标签"
   }
 }

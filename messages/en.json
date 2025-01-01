@@ -71,5 +71,12 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "copyright": "Copyright © {year} RssTabs.com. All rights reserved."
+  },
+
+  "tags": {
+    "title": "Tags",
+    "description": "Browse all tags in RssTabs",
+    "search-placeholder": "Search tags...",
+    "no-results": "No matching tags found"
   }
 }

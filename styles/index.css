@@ -1,9 +1,8 @@
 @import './vars.css';
+@import './globals.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
 
 body {
   color: var(--rss-color-text);
