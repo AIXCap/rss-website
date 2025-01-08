@@ -1,3 +1,6 @@
+// cloudflare edge runtime
+export const runtime = 'edge'
+
 import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
