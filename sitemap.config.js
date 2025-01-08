@@ -25,51 +25,7 @@ module.exports = {
     policies: [
       {
         userAgent: '*',
-        allow: ['/sitemap.xml', '/post/*', '/posts', '/tags'],
-        disallow: ['/api/*', '/_next/*', '/static/*']
-      },
-      {
-        userAgent: 'Twitterbot',
-        allow: '/'
-      },
-      {
-        userAgent: 'Yisouspider',
-        allow: '/'
-      },
-      {
-        userAgent: 'Applebot',
-        allow: '/'
-      },
-      {
-        userAgent: 'bingbot',
-        allow: '/'
-      },
-      {
-        userAgent: 'Sogou inst spider',
-        allow: '/'
-      },
-      {
-        userAgent: 'Sogou web spider',
-        allow: '/'
-      },
-      {
-        userAgent: '360Spider',
-        allow: '/'
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/'
-      },
-      {
-        userAgent: 'Baiduspider',
-        allow: '/'
-      },
-      {
-        userAgent: 'Bytespider',
-        allow: '/'
-      },
-      {
-        userAgent: 'PetalBot',
+        disallow: ['/api/*', '/_next/*', '/static/*'],
         allow: '/'
       }
     ],
