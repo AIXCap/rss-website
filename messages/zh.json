@@ -73,10 +73,28 @@
     "copyright": "版权所有 © {year} RssTabs.com 保留所有权利"
   },
 
-  "tags": {
+  "Tags": {
     "title": "标签",
     "description": "浏览 RssTabs 中的所有标签分类",
     "search-placeholder": "搜索标签...",
-    "no-results": "没有找到匹配的标签"
+    "no-results": "没有找到匹配的标签",
+    "nav-label": "标签导航",
+    "view-tag-articles": "查看标签 {tagName} 的所有文章"
+  },
+
+  "Posts": {
+    "title": "文章列表 - RssTabs",
+    "description": "浏览全部 RSS 订阅源中的所有文章",
+    "articles-section": "文章列表",
+    "filtered-by-tag": "标签筛选：{tag}",
+    "clear-tag-filter": "清除标签筛选"
+  },
+
+  "Post": {
+    "title": "文章详情 - RssTabs",
+    "description": "查看文章详情",
+    "tags": "标签",
+    "read-original": "阅读原文",
+    "view-in-app": "在 RssTabs 中查看"
   }
 }

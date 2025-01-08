@@ -7,19 +7,10 @@ export interface Tag {
 }
 
 // API 响应数据结构
-export interface ApiResponse<T> {
-  data: T
+export interface TagListResponse {
+  data: Tag[]
   status: number
   extra: Record<string, any>
   message: string
   success: boolean
 }
-
-// 标签列表数据结构
-export interface TagListData {
-  list: Tag[]
-  total: number
-}
-
-// 标签列表完整响应类型
-export type TagListResponse = ApiResponse<TagListData>

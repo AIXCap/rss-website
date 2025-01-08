@@ -1,17 +1,26 @@
-import { Card } from '@/components/ui/card'
+import { getTranslations } from 'next-intl/server'
 import { Tag } from '@/types/tag'
+import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
 
 interface TagCardProps {
   tag: Tag
   locale: string
 }
 
-export function TagCard({ tag, locale }: TagCardProps) {
+export async function TagCard({ tag, locale }: TagCardProps) {
+  const t = await getTranslations('Tags')
+  const tagLabel = t('view-tag-articles', { tagName: tag.tagName })
+
   return (
-    <Card className="group inline-block px-3 py-1.5 transition-colors hover:bg-muted">
-      <span className="text-sm text-foreground group-hover:text-primary">
+    <Link
+      href={`/${locale}/posts?tag=${encodeURIComponent(tag.tagName)}`}
+      title={tagLabel}
+      aria-label={tagLabel}
+    >
+      <Badge variant="secondary" className="hover:bg-secondary/80">
         {tag.tagName}
-      </span>
-    </Card>
+      </Badge>
+    </Link>
   )
 }

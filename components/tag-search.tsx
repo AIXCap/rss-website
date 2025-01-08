@@ -1,31 +1,26 @@
 'use client'
 
-import { Input } from '@/components/ui/input'
 import { useTranslations } from 'next-intl'
+import { Tag } from '@/types/tag'
+import { Input } from '@/components/ui/input'
 import { useState } from 'react'
 
 interface TagSearchProps {
-  onSearch: (query: string) => void
+  tags: Tag[]
 }
 
-export function TagSearch({ onSearch }: TagSearchProps) {
-  const t = useTranslations()
-  const [query, setQuery] = useState('')
-
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setQuery(value)
-    onSearch(value)
-  }
+export function TagSearch({ tags }: TagSearchProps) {
+  const t = useTranslations('Tags')
+  const [searchQuery, setSearchQuery] = useState('')
 
   return (
-    <div className="w-full max-w-xl">
+    <div>
       <Input
         type="search"
-        value={query}
-        onChange={handleSearch}
-        placeholder={t('tags.search-placeholder')}
-        className="w-full"
+        placeholder={t('search-placeholder')}
+        value={searchQuery}
+        onChange={e => setSearchQuery(e.target.value)}
+        className="max-w-sm"
       />
     </div>
   )

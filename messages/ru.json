@@ -73,10 +73,28 @@
     "copyright": "Авторское право © {year} RssTabs.com. Все права защищены."
   },
 
-  "tags": {
+  "Tags": {
     "title": "Теги",
     "description": "Просмотр всех тегов в RssTabs",
     "search-placeholder": "Поиск тегов...",
-    "no-results": "Соответствующие теги не найдены"
+    "no-results": "Соответствующие теги не найдены",
+    "nav-label": "Навигация по тегам",
+    "view-tag-articles": "Просмотреть все статьи с тегом {tagName}"
+  },
+
+  "Posts": {
+    "title": "Статьи - RssTabs",
+    "description": "Просмотр всех статей из ваших любимых RSS-каналов",
+    "articles-section": "Список статей",
+    "filtered-by-tag": "Отфильтровано по тегу: {tag}",
+    "clear-tag-filter": "Очистить фильтр тегов"
+  },
+
+  "Post": {
+    "title": "Статья - RssTabs",
+    "description": "Просмотр деталей статьи",
+    "tags": "Теги",
+    "read-original": "Читать оригинальную статью",
+    "view-in-app": "Просмотреть в RssTabs"
   }
 }

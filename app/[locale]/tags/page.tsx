@@ -1,36 +1,36 @@
-import { getTagList } from '@/lib/api'
-import { TagList } from '@/components/tag-list'
+import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import { TagList } from '@/components/tag-list'
+import { getTagList } from '@/lib/api'
 
-// cloudflare edge runtime
-export const runtime = 'edge'
-
-// 生成页面元数据
 export async function generateMetadata({
   params: { locale }
 }: {
   params: { locale: string }
 }) {
-  const t = await getTranslations({ locale })
+  const t = await getTranslations('Tags')
 
   return {
-    title: `${t('tags.title')} - RssTabs`,
-    description: t('tags.description')
-  }
+    title: t('title'),
+    description: t('description')
+  } satisfies Metadata
 }
 
-// 标签页面组件
 export default async function TagsPage({
   params: { locale }
 }: {
   params: { locale: string }
 }) {
-  // 获取标签数据
+  const t = await getTranslations('Tags')
   const { data } = await getTagList()
 
   return (
-    <main className="container mx-auto px-4 py-8">
-      <TagList initialTags={data.list} locale={locale} />
+    <main className="mx-auto w-full max-w-screen-xl pb-10 px-5 box-border">
+      <header className="py-8">
+        <h1 className="text-3xl font-bold">{t('title')}</h1>
+        <p className="mt-2 text-muted-foreground">{t('description')}</p>
+      </header>
+      <TagList tags={data} locale={locale} />
     </main>
   )
 }

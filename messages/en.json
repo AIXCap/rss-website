@@ -73,10 +73,28 @@
     "copyright": "Copyright © {year} RssTabs.com. All rights reserved."
   },
 
-  "tags": {
+  "Tags": {
     "title": "Tags",
     "description": "Browse all tags in RssTabs",
     "search-placeholder": "Search tags...",
-    "no-results": "No matching tags found"
+    "no-results": "No matching tags found",
+    "nav-label": "Tags navigation",
+    "view-tag-articles": "View all articles with tag {tagName}"
+  },
+
+  "Posts": {
+    "title": "Articles - RssTabs",
+    "description": "Browse all articles from all RSS feeds",
+    "articles-section": "Article List",
+    "filtered-by-tag": "Filtered by tag: {tag}",
+    "clear-tag-filter": "Clear tag filter"
+  },
+
+  "Post": {
+    "title": "Article - RssTabs",
+    "description": "View article details",
+    "tags": "Tags",
+    "read-original": "Read original article",
+    "view-in-app": "View in RssTabs"
   }
 }

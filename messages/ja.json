@@ -73,10 +73,28 @@
     "copyright": "© {year} RssTabs.com すべての権利を保持します"
   },
 
-  "tags": {
+  "Tags": {
     "title": "タグ",
     "description": "RssTabs のすべてのタグを閲覧",
     "search-placeholder": "タグを検索...",
-    "no-results": "一致するタグが見つかりません"
+    "no-results": "一致するタグが見つかりません",
+    "nav-label": "タグナビゲーション",
+    "view-tag-articles": "タグ {tagName} のすべての記事を表示"
+  },
+
+  "Posts": {
+    "title": "記事一覧 - RssTabs",
+    "description": "すべてのRSSフィードからすべての記事を閲覧",
+    "articles-section": "記事一覧",
+    "filtered-by-tag": "タグでフィルター：{tag}",
+    "clear-tag-filter": "タグフィルターをクリア"
+  },
+
+  "Post": {
+    "title": "記事詳細 - RssTabs",
+    "description": "記事の詳細を表示",
+    "tags": "タグ",
+    "read-original": "元の記事を読む",
+    "view-in-app": "RssTabs で表示"
   }
 }
