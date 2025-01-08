@@ -23,18 +23,55 @@ module.exports = {
   ],
   robotsTxtOptions: {
     policies: [
-      { userAgent: '*', disallow: '/' },
-      { userAgent: 'Yisouspider', allow: '/' },
-      { userAgent: 'Applebot', allow: '/' },
-      { userAgent: 'bingbot', allow: '/' },
-      { userAgent: 'Sogou inst spider', allow: '/' },
-      { userAgent: 'Sogou web spider', allow: '/' },
-      { userAgent: '360Spider', allow: '/' },
-      { userAgent: 'Googlebot', allow: '/' },
-      { userAgent: 'Baiduspider', allow: '/' },
-      { userAgent: 'Bytespider', allow: '/' },
-      { userAgent: 'PetalBot', allow: '/' },
-      { userAgent: 'Twitterbot', allow: '/' }
+      {
+        userAgent: '*',
+        allow: ['/sitemap.xml', '/post/*', '/posts', '/tags'],
+        disallow: ['/api/*', '/_next/*', '/static/*']
+      },
+      {
+        userAgent: 'Twitterbot',
+        allow: '/'
+      },
+      {
+        userAgent: 'Yisouspider',
+        allow: '/'
+      },
+      {
+        userAgent: 'Applebot',
+        allow: '/'
+      },
+      {
+        userAgent: 'bingbot',
+        allow: '/'
+      },
+      {
+        userAgent: 'Sogou inst spider',
+        allow: '/'
+      },
+      {
+        userAgent: 'Sogou web spider',
+        allow: '/'
+      },
+      {
+        userAgent: '360Spider',
+        allow: '/'
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/'
+      },
+      {
+        userAgent: 'Baiduspider',
+        allow: '/'
+      },
+      {
+        userAgent: 'Bytespider',
+        allow: '/'
+      },
+      {
+        userAgent: 'PetalBot',
+        allow: '/'
+      }
     ],
     additionalSitemaps: ['https://doc.rsstabs.com/sitemap.xml']
   },
