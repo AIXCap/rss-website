@@ -13,39 +13,52 @@ interface ArticleCardProps {
 export function ArticleCard({ article, locale }: ArticleCardProps) {
   return (
     <Card className="hover:bg-muted/50 transition-colors">
-      <Link href={`/${locale}/post/${article.id}`} className="block">
-        <CardHeader className="space-y-2 pt-5 pb-2">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <div className="w-5 h-5 flex-shrink-0 bg-muted rounded-sm flex items-center justify-center text-xs overflow-hidden">
-              <SourceLogo logo={article.sourceLogo} name={article.sourceName} />
-            </div>
-            <address className="inline not-italic">
-              <span>{article.sourceName}</span>
+      <div>
+        <Link href={`/${locale}/post/${article.id}`} className="block">
+          <CardHeader className="space-y-2 pt-5 pb-2">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="w-5 h-5 flex-shrink-0 bg-muted rounded-sm flex items-center justify-center text-xs overflow-hidden">
+                <SourceLogo
+                  logo={article.sourceLogo}
+                  name={article.sourceName}
+                />
+              </div>
+              <address className="inline not-italic">
+                <span>{article.sourceName}</span>
+                <span aria-hidden="true">·</span>
+                <span>{article.author}</span>
+              </address>
               <span aria-hidden="true">·</span>
-              <span>{article.author}</span>
-            </address>
-            <span aria-hidden="true">·</span>
-            <time dateTime={article.publicationDate}>
-              {formatDate(article.publicationDate, locale)}
-            </time>
-          </div>
-          <h2 className="text-xl font-semibold">{article.title}</h2>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          <p className="text-base text-muted-foreground line-clamp-2">
-            {article.description?.replace(/<[^>]*>/g, '')}
-          </p>
-          {article.tags.length > 0 && (
+              <time dateTime={article.publicationDate}>
+                {formatDate(article.publicationDate, locale)}
+              </time>
+            </div>
+            <h2 className="text-xl font-semibold">{article.title}</h2>
+          </CardHeader>
+          <CardContent className="pt-0 pb-2">
+            <p className="text-base text-muted-foreground line-clamp-2">
+              {article.description?.replace(/<[^>]*>/g, '')}
+            </p>
+          </CardContent>
+        </Link>
+        {article.tags.length > 0 && (
+          <CardContent className="pt-0">
             <div className="flex flex-wrap gap-2" role="list" aria-label="Tags">
               {article.tags.map(tag => (
-                <Badge key={tag} variant="secondary" role="listitem">
-                  {tag}
-                </Badge>
+                <Link
+                  key={tag}
+                  href={`/${locale === 'en' ? '' : locale + '/'}posts?tag=${encodeURIComponent(tag)}`}
+                  className="hover:opacity-80"
+                >
+                  <Badge variant="secondary" role="listitem">
+                    {tag}
+                  </Badge>
+                </Link>
               ))}
             </div>
-          )}
-        </CardContent>
-      </Link>
+          </CardContent>
+        )}
+      </div>
     </Card>
   )
 }

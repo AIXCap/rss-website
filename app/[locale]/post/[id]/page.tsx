@@ -9,6 +9,7 @@ import { formatDate } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { SourceLogo } from '@/components/source-logo'
 import { parseHTMLToFirstImage, parseHTMLToText } from '@/lib/html-parser'
+import Link from 'next/link'
 
 interface PostPageProps {
   params: {
@@ -195,9 +196,15 @@ export default async function PostPage({
                 aria-label={t('tags')}
               >
                 {article.tags.map(tag => (
-                  <Badge key={tag} variant="secondary" role="listitem">
-                    {tag}
-                  </Badge>
+                  <Link
+                    key={tag}
+                    href={`/${locale === 'en' ? '' : locale + '/'}posts?tag=${encodeURIComponent(tag)}`}
+                    className="hover:opacity-80"
+                  >
+                    <Badge variant="secondary" role="listitem">
+                      {tag}
+                    </Badge>
+                  </Link>
                 ))}
               </div>
             )}
