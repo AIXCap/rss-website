@@ -33,7 +33,8 @@ module.exports = {
       { userAgent: 'Googlebot', allow: '/' },
       { userAgent: 'Baiduspider', allow: '/' },
       { userAgent: 'Bytespider', allow: '/' },
-      { userAgent: 'PetalBot', allow: '/' }
+      { userAgent: 'PetalBot', allow: '/' },
+      { userAgent: 'Twitterbot', allow: '/' }
     ],
     additionalSitemaps: ['https://doc.rsstabs.com/sitemap.xml']
   },
@@ -50,7 +51,7 @@ module.exports = {
     const locales = ['', 'zh', 'ja', 'ru']
     const routes = [
       '', // 首页
-      '/post',
+      '/posts',
       '/tags'
       // 添加其他重要页面路径
     ]
