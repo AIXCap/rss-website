@@ -20,9 +20,11 @@ export async function generateMetadata({
 }
 
 export default async function TagsPage({
-  params: { locale }
+  params: { locale },
+  searchParams
 }: {
   params: { locale: string }
+  searchParams: { q?: string }
 }) {
   const t = await getTranslations('Tags')
   const { data } = await getTagList()
@@ -33,7 +35,7 @@ export default async function TagsPage({
         <h1 className="text-3xl font-bold">{t('title')}</h1>
         <p className="mt-2 text-muted-foreground">{t('description')}</p>
       </header>
-      <TagList tags={data} locale={locale} />
+      <TagList tags={data} locale={locale} searchParams={searchParams} />
     </main>
   )
 }
