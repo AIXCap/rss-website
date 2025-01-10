@@ -213,15 +213,6 @@ export default async function PostPage({
           {/* 原文链接和主站链接 */}
           <div className="not-prose mb-8 flex items-center gap-4">
             <a
-              href={article.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t('read-original')}
-              <span aria-hidden="true">→</span>
-            </a>
-            <a
               href={`https://app.rsstabs.com/post/${article.id}`}
               target="_blank"
               rel="noopener noreferrer"
