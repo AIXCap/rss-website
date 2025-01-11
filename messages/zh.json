@@ -96,5 +96,11 @@
     "tags": "标签",
     "read-original": "阅读原文",
     "view-in-app": "在 RssTabs 中查看"
+  },
+
+  "404": {
+    "title": "404 - 文章未找到",
+    "description": "您访问的页面不存在",
+    "translate": "可能该文章还没有翻译"
   }
 }

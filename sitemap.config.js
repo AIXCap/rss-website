@@ -125,7 +125,7 @@ module.exports = {
           // 生成文章路径
           const pagePaths = data.list.flatMap(article =>
             locales.map(locale =>
-              `/${locale}${locale ? '/' : ''}post/${article.id}`.replace(
+              `/${locale}${locale ? '/' : ''}post/${article.articleId}`.replace(
                 '//',
                 '/'
               )

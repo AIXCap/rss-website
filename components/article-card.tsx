@@ -14,7 +14,7 @@ export function ArticleCard({ article, locale }: ArticleCardProps) {
   return (
     <Card className="hover:bg-muted/50 transition-colors">
       <div>
-        <Link href={`/${locale}/post/${article.id}`} className="block">
+        <Link href={`/${locale}/post/${article.articleId}`} className="block">
           <CardHeader className="space-y-2 pt-5 pb-2">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <div className="w-5 h-5 flex-shrink-0 bg-muted rounded-sm flex items-center justify-center text-xs overflow-hidden">

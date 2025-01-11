@@ -59,7 +59,8 @@ export async function getArticle(
   id: string,
   locale: string
 ): Promise<ArticleResponse> {
-  const res = await fetch(`${API_BASE_URL}/api/articles/ssr/findOne`, {
+  console.log('getArticle', id, locale)
+  const res = await fetch(`${API_BASE_URL}/api/articles/ssr/findOneByOrigin`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -70,8 +71,7 @@ export async function getArticle(
       id,
       summary: false,
       extend: false
-    }),
-    next: { revalidate: 3600 } // 1 小时缓存
+    })
   })
 
   if (!res.ok) {

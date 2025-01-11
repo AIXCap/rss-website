@@ -96,5 +96,11 @@
     "tags": "Tags",
     "read-original": "Read original article",
     "view-in-app": "View in RssTabs"
+  },
+
+  "404": {
+    "title": "404 - Article Not Found",
+    "description": "The article you are looking for does not exist.",
+    "translate": "The article you are looking for does not exist."
   }
 }

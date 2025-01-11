@@ -164,9 +164,19 @@ export default async function PostPage({
   params: { id, locale }
 }: PostPageProps) {
   const t = await getTranslations('Post')
-
+  const t404 = await getTranslations('404')
   try {
     const { data: article } = await getArticle(id, locale)
+
+    if (!article) {
+      return (
+        <div className="mx-auto w-full max-w-3xl pb-10 px-5 box-border flex flex-col items-center justify-center h-screen">
+          <h1 className="text-3xl font-bold mb-4">{t404('title')}</h1>
+          <p className="text-lg text-muted-foreground">{t404('translate')}</p>
+        </div>
+      )
+    }
+
     const desc = article?.summary
       ? parseMdToHtml(article?.summary)
       : parseHTMLToText(article.description)
