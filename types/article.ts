@@ -11,6 +11,7 @@ export interface Article {
   tags: string[]
   imgList: Record<string, string>
   description: string
+  summary: string
   publicationDate: string
   createDate: string
   lastUpdated: string

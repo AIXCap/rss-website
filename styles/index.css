@@ -1,5 +1,6 @@
 @import './vars.css';
 @import './globals.css';
+@import './md.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

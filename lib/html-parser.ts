@@ -1,18 +1,22 @@
-/*
- * @LastEditTime: 2025-01-09 03:34:37
- * @Description: ...
- * @Date: 2025-01-09 03:34:05
- * @Author: isboyjc
- * @LastEditors: isboyjc
+import { parse as htmlParse } from 'node-html-parser'
+import { parse as markedParse } from 'marked'
+
+/**
+ * @param {*} md
+ * @description md转换为html
+ * @return {*}
  */
-import { parse } from 'node-html-parser'
+export function parseMdToHtml(md: string) {
+  if (!md) return ''
+  return markedParse(md)
+}
 
 /**
  * 从 HTML 字符串中提取第一个图片的 URL
  */
 export function parseHTMLToFirstImage(htmlString: string): string {
   if (!htmlString) return ''
-  const root = parse(htmlString)
+  const root = htmlParse(htmlString)
   const img = root.querySelector('img')
   return img?.getAttribute('src') || ''
 }
@@ -22,6 +26,6 @@ export function parseHTMLToFirstImage(htmlString: string): string {
  */
 export function parseHTMLToText(htmlString: string): string {
   if (!htmlString) return htmlString
-  const root = parse(htmlString)
+  const root = htmlParse(htmlString)
   return root.textContent || ''
 }

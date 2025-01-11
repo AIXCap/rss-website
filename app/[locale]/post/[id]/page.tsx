@@ -8,7 +8,11 @@ import { getArticle } from '@/lib/api'
 import { formatDate } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { SourceLogo } from '@/components/source-logo'
-import { parseHTMLToFirstImage, parseHTMLToText } from '@/lib/html-parser'
+import {
+  parseHTMLToFirstImage,
+  parseHTMLToText,
+  parseMdToHtml
+} from '@/lib/html-parser'
 import Link from 'next/link'
 
 interface PostPageProps {
@@ -25,7 +29,9 @@ export async function generateMetadata({
   try {
     const { data: article } = await getArticle(id, locale)
     const imageUrl = parseHTMLToFirstImage(article.description)
-    const desc = parseHTMLToText(article.description)
+    const desc = article?.summary
+      ? article?.summary
+      : parseHTMLToText(article.description)
 
     let images: any[] = []
     if (imageUrl) {
@@ -161,7 +167,9 @@ export default async function PostPage({
 
   try {
     const { data: article } = await getArticle(id, locale)
-    const desc = parseHTMLToText(article.description)
+    const desc = article?.summary
+      ? parseMdToHtml(article?.summary)
+      : parseHTMLToText(article.description)
 
     return (
       <main className="mx-auto w-full max-w-3xl pb-10 px-5 box-border">
@@ -187,11 +195,14 @@ export default async function PostPage({
             </div>
             <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
             {desc && (
-              <p className="text-xl text-muted-foreground mb-4">{desc}</p>
+              <div
+                className="md-style"
+                dangerouslySetInnerHTML={{ __html: desc }}
+              />
             )}
             {article.tags.length > 0 && (
               <div
-                className="flex flex-wrap gap-2"
+                className="flex flex-wrap gap-2 mt-2"
                 role="list"
                 aria-label={t('tags')}
               >
