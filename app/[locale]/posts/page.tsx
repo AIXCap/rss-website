@@ -12,15 +12,20 @@ import { X } from 'lucide-react'
 import Link from 'next/link'
 
 export async function generateMetadata({
-  params: { locale }
+  params: { locale },
+  searchParams
 }: {
   params: { locale: string }
+  searchParams: {
+    tag?: string
+  }
 }) {
   const t = await getTranslations('Posts')
+  const tag = searchParams.tag
 
   return {
-    title: t('title'),
-    description: t('description')
+    title: tag ? t('tagTitle', { tag }) : t('title'),
+    description: tag ? t('tagDescription', { tag }) : t('description')
   } satisfies Metadata
 }
 
@@ -76,8 +81,12 @@ export default async function PostsPage({
   return (
     <main className="mx-auto w-full max-w-3xl pb-10 px-5 box-border">
       <header className="py-8">
-        <h1 className="text-3xl font-bold">{t('title')}</h1>
-        <p className="mt-2 text-muted-foreground">{t('description')}</p>
+        <h1 className="text-3xl font-bold">
+          {tag ? t('tagTitle', { tag }) : t('title')}
+        </h1>
+        <p className="mt-2 text-muted-foreground">
+          {tag ? t('tagDescription', { tag }) : t('description')}
+        </p>
       </header>
       <section aria-label={t('articles-section')} className="space-y-6">
         {tag && (

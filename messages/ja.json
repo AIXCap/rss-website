@@ -85,6 +85,8 @@
   "Posts": {
     "title": "記事一覧 - RssTabs",
     "description": "すべてのRSSフィードからすべての記事を閲覧",
+    "tagTitle": "タグ {tag} の記事一覧",
+    "tagDescription": "タグ {tag} のすべての記事を閲覧",
     "articles-section": "記事一覧",
     "filtered-by-tag": "タグでフィルター：{tag}",
     "clear-tag-filter": "タグフィルターをクリア"

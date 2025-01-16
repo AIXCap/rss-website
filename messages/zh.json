@@ -85,6 +85,8 @@
   "Posts": {
     "title": "文章列表 - RssTabs",
     "description": "浏览全部 RSS 订阅源中的所有文章",
+    "tagTitle": "{tag} 标签文章列表",
+    "tagDescription": "浏览 {tag} 标签中的所有文章",
     "articles-section": "文章列表",
     "filtered-by-tag": "标签筛选：{tag}",
     "clear-tag-filter": "清除标签筛选"

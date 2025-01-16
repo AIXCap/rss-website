@@ -85,6 +85,8 @@
   "Posts": {
     "title": "Статьи - RssTabs",
     "description": "Просмотр всех статей из ваших любимых RSS-каналов",
+    "tagTitle": "Статьи с тегом {tag}",
+    "tagDescription": "Просмотр всех статей с тегом {tag}",
     "articles-section": "Список статей",
     "filtered-by-tag": "Отфильтровано по тегу: {tag}",
     "clear-tag-filter": "Очистить фильтр тегов"

@@ -1,3 +1,10 @@
+/*
+ * @LastEditTime: 2025-01-17 01:59:47
+ * @Description: ...
+ * @Date: 2025-01-08 23:29:23
+ * @Author: isboyjc
+ * @LastEditors: isboyjc
+ */
 'use client'
 
 import Image from 'next/image'
@@ -11,8 +18,8 @@ interface SourceLogoProps {
 export function SourceLogo({ logo, name }: SourceLogoProps) {
   const [error, setError] = useState(!logo)
 
-  if (error) {
-    return <span>{name.charAt(0)}</span>
+  if (error || !name) {
+    return <span>{name?.[0] || ''}</span>
   }
 
   return (

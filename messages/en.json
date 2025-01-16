@@ -85,6 +85,8 @@
   "Posts": {
     "title": "Articles - RssTabs",
     "description": "Browse all articles from all RSS feeds",
+    "tagTitle": "Articles with tag {tag}",
+    "tagDescription": "Browse all articles with tag {tag}",
     "articles-section": "Article List",
     "filtered-by-tag": "Filtered by tag: {tag}",
     "clear-tag-filter": "Clear tag filter"
