@@ -174,7 +174,7 @@ export default function Footer() {
             </a>
             <a
               className="text-[var(--rss-color-text-3)] hover:text-[var(--rss-color-text)]"
-              href="https://discord.gg/H8kNygrx"
+              href="https://discord.gg/6UqmB7fCM8"
               target="_blank"
             >
               <svg
