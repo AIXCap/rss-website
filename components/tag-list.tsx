@@ -45,9 +45,10 @@ export async function TagList({ tags, locale, searchParams }: TagListProps) {
 
       {/* 标签列表（服务端渲染） */}
       <nav aria-label={t('nav-label')} className="flex flex-wrap gap-2 min-h-[60px]">
-        {pagedTags.map(tag => (
-          <TagCard key={tag.id} tag={tag} locale={locale} />
-        ))}
+        {pagedTags.map(tag => {
+          const tagLabel = t('view-tag-articles', { tagName: tag.tagName })
+          return <TagCard key={tag.id} tag={tag} locale={locale} tagLabel={tagLabel} />
+        })}
       </nav>
 
       {/* 分页控件 */}
